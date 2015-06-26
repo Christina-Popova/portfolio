@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tasks List</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <script type="text/template" id="taskTemplate">
+        <span><%= taskName %></span>
+        <% if (status == 0) { %>
+            <button class="btn-edit">Edit</button>
+            <button class="btn-complete">Complete</button>
+            <button class="btn-save">Save</button>
+            <button class="btn-cansel">Cancel</button>
+        <% } %>
+    </script>
+
+    <script type="text/template" id="editTemplate">
+        <input type='text' value="<%= taskName %>">
+        <button class="btn-edit">Edit</button>
+        <button class="btn-complete">Complete</button>
+        <button class="btn-save">Save</button>
+        <button class="btn-cansel">Cancel</button>
+    </script>
+
+    <script type="text/template" id="formTemplate">
+        <form id="task-form" action="#">
+            <fieldset>
+                <textarea id="task-name" cols="30" rows="3" placeholder="Enter task name" name="task"></textarea>
+                <input type="submit" value="Add"/>
+            </fieldset>
+        </form>
+
+    </script>
+
+	<div class="wrapper">
+	</div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/backbone.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

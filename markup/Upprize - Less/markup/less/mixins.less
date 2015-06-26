@@ -1,0 +1,104 @@
+.clear-flow {
+  &:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+.reset-list-style {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.reset-list-space{
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.hide-text {
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.border-radius (@top, @right:@top, @bottom:@top, @left:@right){
+  -webkit-border-radius: @top @right @bottom @left;
+  border-radius: @top @right @bottom @left;
+}
+
+.make-button {
+  text-decoration: none;
+  font: @base-btn-font-size 'MyriadPro-BoldCond', Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: @white;
+}
+.make-triangle-right(@color, @size) {
+  &:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top:50%;
+    margin-top: -@size;
+    width: 0;
+    height: 0;
+    border: @size solid transparent;
+    border-left:  @size solid @color;
+  }
+}
+
+.make-triangle-bottom(@color, @size) {
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 100%;
+    border: @size solid transparent;
+    border-top: @size solid @color;
+  }
+}
+
+.gradient-style (@color-top, @color-bottom) {
+  background: @color-top; /* Old browsers */
+  background: -moz-linear-gradient(top,  @color-top 0%, @color-bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color-top), color-stop(100%,@color-bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  @color-top 0%,@color-bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  @color-top 0%,@color-bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  @color-top 0%,@color-bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  @color-top 0%,@color-bottom 100%); /* W3C */
+}
+
+.gradient-style-hover (@color-top-hover, @color-bottom-hover) {
+  @color-top: darken(@color-top-hover, 10%);
+  @color-bottom: darken(@color-bottom-hover, 10%);
+  .gradient-style (@color-top,@color-bottom);
+}
+
+.gradient-style-hover-lighten (@color-top-hover, @color-bottom-hover) {
+  @color-top: lighten(@color-top-hover, 15%);
+  @color-bottom: lighten(@color-bottom-hover, 15%);
+  .gradient-style (@color-top,@color-bottom);
+}
+
+.gradient-style-complex (@color-top, @rate-top, @color-middle, @rate-middle, @color-center, @rate-center, @color-bottom, @rate-bottom) {
+  background: @color-top; /* Old browsers */
+  background: -moz-linear-gradient(top, @color-top @rate-top, @color-middle @rate-middle, @color-center @rate-center, @color-bottom @rate-bottom); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(@rate-top, @color-top), color-stop(@rate-middle, @color-middle), color-stop(@rate-center, @color-center), color-stop(@rate-bottom, @color-bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, @color-top @rate-top, @color-middle @rate-middle, @color-center @rate-center, @color-bottom @rate-bottom); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, @color-top @rate-top, @color-middle @rate-middle, @color-center @rate-center, @color-bottom @rate-bottom); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, @color-top @rate-top, @color-middle @rate-middle, @color-center @rate-center, @color-bottom @rate-bottom); /* IE10+ */
+  background: linear-gradient(to bottom, @color-top @rate-top, @color-middle @rate-middle, @color-center @rate-center, @color-bottom @rate-bottom); /* W3C */
+}
+
+.gradient-style-complex-hover (@color-top-hover, @rate-top, @color-middle-hover, @rate-middle, @color-center-hover, @rate-center, @color-bottom-hover, @rate-bottom) {
+  @color-top: darken(@color-top-hover, 7%);
+  @color-middle: darken(@color-middle-hover, 7%);
+  @color-center: darken(@color-center-hover, 7%);
+  @color-bottom: darken(@color-bottom-hover, 7%);
+  .gradient-style-complex (@color-top, @rate-top, @color-middle, @rate-middle, @color-center, @rate-center, @color-bottom, @rate-bottom);
+}
+

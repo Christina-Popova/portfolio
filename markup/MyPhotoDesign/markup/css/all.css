@@ -1,0 +1,265 @@
+body {
+    margin: 0px;
+    background-image: url("../images/bg-header.jpg");
+    background-repeat: repeat-x;
+    background-color: #f9f6ea;
+}
+
+#wrapper {
+    width: 980px;
+    margin: 0 auto;
+    font-family: arial, sans-serif;
+    color: #656565;
+}
+
+#header {
+    height: 130px;
+    position: relative;
+}
+
+#header > .logo img {
+    position: absolute;
+    top: 55px;
+}
+.nav ul {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    margin: 0;
+    padding: 0;
+}
+.nav li {
+    display: inline;
+    padding-left: 25px;
+}
+.nav a{
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+.nav a.active {
+    color: #ffc600;
+    text-decoration: underline;
+}
+
+#main {
+     width: 980px;
+     background-color: #fff;
+     border: 1px solid #eeeadc;
+     overflow: auto;
+     margin-top: -15px;
+ }
+
+#content {
+    width: 635px;
+    padding-left: 15px;
+    padding-bottom: 17px;
+    float: left;
+}
+#content > h1, #sidebar > h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 25px auto 25px 0;
+    color: #000;
+}
+
+.post-entity {
+    overflow: hidden;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    margin-right: 8px;
+}
+.post-entity > .post-text {
+    width: 285px;
+    padding-right: 5px;
+    float: left;
+}
+.border-bottom {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 20px;
+}
+
+.meta {
+    float: right;
+    padding: 8px 0;
+}
+.meta img {
+    border: 1px solid #eaeaea;
+    padding: 6px;
+    margin-bottom: 5px;
+    display: block;
+}
+.meta button{
+    padding: 8px 18px;
+}
+.pagination li {
+    display: inline;
+    padding-left: 5px;
+}
+.pagination a {
+    padding: 7px 10px;
+}
+#sidebar{
+    width: 305px;
+    padding-right: 15px;
+    float: right;
+}
+.comment {
+    margin: 20px 15px;
+    font-size: 11px;
+    background-image: url("../images/bg-comment.png");
+    background-repeat: no-repeat;
+}
+.comment q{
+    font-size: 11px;
+    line-height: 1.8;
+}
+.comment > span {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: right;
+}
+
+.advertising img {
+     display: block;
+     border: 1px solid #dcdacf;
+ }
+.advertising {
+    margin-top: 10px;
+}
+#footer{
+    padding: 20px;
+    position: relative;
+}
+.copyright {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.copyright span {
+    display: block;
+    font-size: 11px;
+    text-align: right;
+    line-height: 1.8;
+}
+
+.border {
+    border: 9px solid #fdfbf1;
+    outline: 1px solid #ebebeb;
+}
+.comments-list, .entry-content, .entry-contact-form, .contact-form-entity, .entry-contact-info {
+    border:  1px solid #ebebeb;
+}
+strong {
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+p {
+    font-size: 11px;
+    margin: 0;
+    line-height: 1.8;
+}
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 25px auto 20px 0;
+}
+.button-style {
+    background-color: #fdfbf1;
+    border: 1px solid #dbd6c6;
+    font-size: 14px;
+    font-weight: bold;
+    color: #656565;
+}
+a.button-style {
+    text-decoration: none;
+}
+.entry-contact-form, .entry-contact-info {
+    padding: 20px 15px 20px 15px;
+}
+.contact-form-text {
+    padding-bottom: 25px;
+}
+.contact-form-entity {
+    padding: 15px 30px 15px 20px;
+}
+.contact-form form{
+    margin-top: 30px;
+}
+.contact-info {
+    margin: 15px 0;
+    padding-left: 0;
+}
+.contact-info li {
+    font-size: 11px;
+    font-weight: bold;
+    list-style-type: none;
+    line-height: 1.8;
+}
+.twitter a{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #40969f;
+}
+.twitter img{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.contact-form {
+    margin-top: 35px;
+}
+.contact-form span {
+    font-size: 11px;
+    line-height: 1.8;
+    display: block;
+}
+.contact-form strong {
+    font-size: 11px;
+    display: block;
+    line-height: 1;
+}
+.contact-form label {
+    display: block;
+    float: left;
+}
+.contact-form input, .contact-form textarea {
+    height: 24px;
+    width: 390px;
+    float: right;
+    font: 12px arial, sans-serif;
+    color: #656565;
+    border: 1px solid #dedede;
+    padding: 2px;
+}
+.contact-form input {
+    margin-bottom: 30px;
+}
+.contact-form textarea {
+    height: 280px;
+    margin-bottom: 15px;
+}
+
+.contact-form button {
+    height: 30px;
+    width: 140px;
+    float: right;
+    margin-right: 256px;
+}
+input:focus, textarea:focus, button:hover, button:focus{
+    outline: 0;
+}
+button:active, .button-style.active {
+    outline: 0;
+    background-color: #f0ede0;
+}
+.row {
+    overflow: auto;
+}

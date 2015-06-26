@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tasks List</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+
+<script type="text/template" id="itemTemplate">
+    <td><input type="text" class ="title" name="title" value="<%=title %>"></td>
+    <td><input type="text" class ="quantity" name="quantity" value="<%=quantity %>"></td>
+    <td><input type="text" class ="price" name="price" value="<%=price %>"></td>
+    <td><input type="text" class ="subtotal" name="subtotal" value="<%=subtotal %>" readonly="readonly"></td>
+    <td><button class="btn-remove" type="button">&#10008;</button></td>
+</script>
+
+<div class="wrapper">
+    <h1>Товарная накладная</h1>
+    <form id='invoice-form' action="">
+        <div class="header">
+            <div>
+                <label>Плательщик:</label>
+                <input type="text" name="provider">
+            </div>
+            <div>
+                <label>Получатель:</label>
+                <input type="text" name="customer">
+            </div>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th class="col-title">Наименование</th>
+                <th class="col-quantity">Кол-во</th>
+                <th class="col-price">Цена</th>
+                <th class="col-total">Итого</th>
+                <th class="col-remove">&#10008;</th>
+            </tr>
+            </thead>
+
+            <tbody id="data">
+            </tbody>
+        </table>
+
+        <div class="total-entity">Итого: <span id="total"></span></div>
+
+        <div class="footer">
+            <button type="button" class="btn-add">Добавить строку</button>
+            <button type="button" class="btn-save">&#128190; Сохранить</button>
+        </div>
+    </form>
+</div>
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/backbone.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
